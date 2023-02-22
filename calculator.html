@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Simple Calculator</title>
+    <style>
+*
+{
+    padding: 0px;
+    margin: 0px;
+
+}
+body{
+    background-size: 100%;
+    background-position: 0px -450px;
+    background-attachment:fixed;
+       
+    background-repeat: no-repeat;
+    width:90vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./pexels-gdtography-911738.jpg);
+}
+#container
+{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    background-color:rgba(37, 36, 36, 0.654);
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px black;
+
+}
+#display
+{
+    width: 75%;
+    height: 30px;
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    background-color: black;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+    outline:none;
+    border:groove 10px rgba(115, 17, 17, 0.43);
+box-shadow:2px 2px 2px black;
+}
+.a
+{
+    position: relative;
+    top:15vh;
+    left:5vw;
+    margin: 5px;
+    margin-top: 20px;
+    width: 15%;
+    height:6vh;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    border: 2px solid white;
+}
+#clear
+{
+    position: absolute;
+    bottom: 30px;
+    width: 30%;
+    height: 6vh;
+    font-size: 24px;
+    left: 5vw;
+    background-color: rgb(22, 21, 21);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+
+}
+#equ
+{
+    position: absolute;
+    bottom: 30px;
+    width: 40%;
+    height: 6vh;
+    font-size: 24px;
+    left: 18vw;
+    background-color: rgb(22, 21, 21);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form name="cform">
+<input name="Ans" id="display">
+<br>
+<input  onmousedown="clicksound()" class="a" type="button" value="1" onclick="cform.Ans.value+='1'">
+<input onmousedown="clicksound()"  class="a" type="button" value="2" onclick="cform.Ans.value+='2'">
+<input onmousedown="clicksound()"  class="a" type="button" value="3" onclick="cform.Ans.value+='3'">
+<input   onmousedown="clicksound()" class="a" type="button" value="+" onclick="cform.Ans.value+='+'">
+<br>
+<input onmousedwon="clicksound()"  class="a" type="button" value="4" onclick="cform.Ans.value+='4'">
+<input onmousedown="clicksound()"  class="a" type="button" value="5" onclick="cform.Ans.value+='5'">
+<input onmousedown="clicksound()"  class="a" type="button" value="6" onclick="cform.Ans.value+='6'">
+<input onmousedown="clicksound()"  class="a" type="button" value="-" onclick="cform.Ans.value+='-'">
+<br>
+<input onmousedown="clicksound()"  class="a" type="button" value="7" onclick="cform.Ans.value+='7'">
+
+<input  onmousedown="clicksound()" class="a" type="button" value="8" onclick="cform.Ans.value+='8'">
+<input onmousedown="clicksound()"   class="a"type="button" value="9" onclick="cform.Ans.value+='9'">
+<input onmousedown="clicksound()"  class="a" type="button" value="*" onclick="cform.Ans.value+='*'">
+<br>
+<input onmousedown="clicksound()"  class="a" type="button" value="%" onclick="cform.Ans.value+='%'">
+<input onmousedown="clicksound()"  class="a" type="button" value="0" onclick="cform.Ans.value+='0'">
+<input onmousedown="clicksound()"  class="a" type="button" value="." onclick="cform.Ans.value+='.'">
+<input onmousedown="clicksound()"   class="a" type="button" value="/" onclick="cform.Ans.value+='/'">
+<br>
+<input onmousedown="clicksound()"  id="equ" type="button" value="=" onclick="cform.Ans.value=eval(cform.Ans.value)">
+<input onmousedown="clicksound()"   id="clear" type="button" value="C" onclick="cform.Ans.value =''">
+
+    </form>
+</div>
+<script>
+    function clicksound()
+    {
+        var clksound=new Audio()
+        clksound.src="ButtonSolidCompute SE040304.mp3"
+        clksound.play()
+    }
+</script>
+</body>
+</html>
